@@ -12,7 +12,7 @@ class NavigationBar extends Component {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="navbar-brand link-font">
-                            <Link to="/">anyStore</Link>
+                            <Link to="/">cryptoStats</Link>
                         </div>
                         <div className="collapse navbar-collapse" id="nav-content">
                             <ul className="navbar-nav mr-auto">

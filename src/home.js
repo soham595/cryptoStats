@@ -1,4 +1,6 @@
 import React from 'react';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 class HomePage extends React.Component {
     constructor() {
@@ -9,17 +11,25 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
-        fetch('https://api.coinmarketcap.com/v2/ticker/?convert=USD&limit=10&structure=array')
+        fetch('https://api.coinmarketcap.com/v2/ticker/?convert=USD&structure=array')
             .then(data => {
                 return data.json();
             }).then(data => {
-                let listing = data.data.map((list) => {
-                    return (
-                        <li key={list.id}>{list.rank} {list.quotes? (list.quotes.USD||{}).price||0 : 0} {list.name} {list.symbol} {list.total_supply}</li>
-                    )
-                });
+            let listing = data.data.map((list) => {
+                return (
+                    <tr key={list.id}>
+                        <td>{list.id}</td>
+                        <td>{list.rank}</td>
+                        <td>{list.name} </td>
+                        <td>{list.quotes? (list.quotes.USD||{}).price||0 : 0}</td>
+                        <td>{list.symbol}</td>
+                        <td>{list.quotes.USD.volume_24h}</td>
+                        <td>{list.quotes.USD.percent_change_24h}%</td>
+                    </tr>
+                )
+            });
             this.setState({listing: listing});
-                console.log("state", this.state.listing);
+            console.log("state", this.state.listing);
         })
     }
 
@@ -28,8 +38,24 @@ class HomePage extends React.Component {
             <div>
                 <div className="jumbotron">
                     <div className="container">
-                        <p>RANDOM</p>
-                        {this.state.listing}
+                        <h3>Cryptocurrency Statistics</h3>
+                        <br/>
+                        <table id="dtBasicExample" className="table table-borderless table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Symbol</th>
+                                <th>Volume</th>
+                                <th>Change(24h)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {this.state.listing}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
