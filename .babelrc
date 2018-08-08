@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "plugins": [
+    "transform-es2015-arrow-functions",
+    "transform-async-to-generator"
+  ]
+}

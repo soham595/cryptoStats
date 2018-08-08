@@ -1,0 +1,29 @@
+.signin-container {
+    margin-top: 8%;
+}
+
+.signin-card {
+/ / padding: 40 px 0 px 20 px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.signin-form {
+    max-width: 350px;
+    margin: auto;
+}
+
+.btn-custom {
+    color: #ffffff;
+    background-color: #d64829;
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+.create-account {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 15px;
+}
