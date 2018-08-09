@@ -12,9 +12,7 @@ module.exports = {
     output: {
         path: '/public',
         filename: 'js/bundle.js',
-        publicPath: function(url) {
-          return url.replace(/public/, '..')
-        },
+        publicPath: '/',
     },
 
     devtool: '#source-map',
