@@ -14,7 +14,7 @@ class HomePage extends React.Component {
         this.setState({ isLoading: true });
         //Set it to the amount of records you want per page
         const rowsPerPage = 100;
-        const start = this.state.currentPage * rowsPerPage;
+        const start = page * rowsPerPage;
         fetch(`https://api.coinmarketcap.com/v2/ticker/?convert=USD&structure=array&start=${start}`)
             .then(data => data.json())
             .then(({ data }) => {
