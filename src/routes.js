@@ -9,9 +9,9 @@ class Routes extends Component {
         return (
             <main>
                 <div>
-                    <Route exact path='/' component={HomePage}/>
-                    <Route path='/signin' component={SignInPage}/>
-                    <Route path='/signup' component={SignUpPage}/>
+                    <Route exact path='/cryptostats' component={HomePage}/>
+                    <Route path='/cryptostats/signin' component={SignInPage}/>
+                    <Route path='/cryptostats/signup' component={SignUpPage}/>
                 </div>
             </main>
         );

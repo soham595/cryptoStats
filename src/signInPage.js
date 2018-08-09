@@ -59,7 +59,7 @@ class SignInPage extends React.Component {
                             </div>
                         </div>
                         <div className="create-account">
-                            <Link to="/signup">New to anyStore? Sign Up</Link>
+                            <Link to="/cryptostats/signup">New to anyStore? Sign Up</Link>
                         </div>
                     </div>
                     <div className="col">

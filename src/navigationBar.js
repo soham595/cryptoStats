@@ -12,7 +12,7 @@ class NavigationBar extends Component {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="navbar-brand link-font">
-                            <Link to="/">cryptoStats</Link>
+                            <Link to="/cryptostats">cryptoStats</Link>
                         </div>
                         <div className="collapse navbar-collapse" id="nav-content">
                             <ul className="navbar-nav mr-auto">
@@ -42,7 +42,7 @@ class NavigationBar extends Component {
                                 </div>
                             </form>
                             <li className="nav-link link-font">
-                                <Link to="/signin">Sign In</Link>
+                                <Link to="/cryptostats/signin">Sign In</Link>
                             </li>
                         </div>
                     </div>
