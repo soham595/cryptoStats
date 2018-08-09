@@ -14,9 +14,9 @@ class HomePage extends React.Component {
     fetchData(page) {
         this.setState({ isLoading: true });
         //Set it to the amount of records you want per page
-        const rowsPerPage = 50;
+        const rowsPerPage = 20;
         const start = page * rowsPerPage;
-        fetch(`https://api.coinmarketcap.com/v2/ticker/?convert=USD&structure=array&start=${start+1}&limit=50`)
+        fetch(`https://api.coinmarketcap.com/v2/ticker/?convert=USD&structure=array&start=${start+1}&limit=20`)
             .then(data => data.json())
             .then(({ data }) => {
                 this.setState({
@@ -47,14 +47,14 @@ class HomePage extends React.Component {
             row =>
                 <tr key={row.id}>
                     <td>{row.rank}</td>
-                    <td className="nameBold">{row.name}</td>
+                    <td className="nameBold"><img src={window.location.origin+'/coinLogos/'+row.website_slug+'.png'}/> {row.name}</td>
                     <td>{row.symbol}</td>
-                    <td>${row.quotes? (row.quotes.USD||{}).price||0 : 0}</td>
+                    <td className="blue">${row.quotes? (row.quotes.USD||{}).price||0 : 0}</td>
                     <td>${row.quotes.USD.volume_24h}</td>
                     <td>${row.quotes.USD.market_cap}</td>
-                    <td>{row.quotes.USD.percent_change_1h}%</td>
-                    <td>{row.quotes.USD.percent_change_24h}%</td>
-                    <td>{row.quotes.USD.percent_change_7d}%</td>
+                    <td className={row.quotes.USD.percent_change_1h<0?"red":"green"}>{row.quotes.USD.percent_change_1h}%</td>
+                    <td className={row.quotes.USD.percent_change_24h<0?"red":"green"}>{row.quotes.USD.percent_change_24h}%</td>
+                    <td className={row.quotes.USD.percent_change_7d<0?"red":"green"}>{row.quotes.USD.percent_change_7d}%</td>
                 </tr>
         );
 
@@ -62,10 +62,12 @@ class HomePage extends React.Component {
         // Take a look at the onClick handlers
         return (
             <div>
+                <h3>Cryptocurrency Statistics</h3>
+                <br/>
                 <div className="jumbotron">
-                    <div className="container">
-                        <h3>Cryptocurrency Statistics</h3>
-                        <br/>
+                    <div className="container-fluid">
+                        <button className={currentPage===0?"none":"float-left btn btn-outline-light btnPage"} onClick={() => this.fetchData(prevPage)}>Previous 20</button>
+                        <button className="float-right btn btn-outline-light btnPage" onClick={() => this.fetchData(nextPage)}>Next 20</button>
                         <table className="table table-borderless table-hover">
                             <thead>
                             <tr>
@@ -73,11 +75,11 @@ class HomePage extends React.Component {
                                 <th>Name</th>
                                 <th>Symbol</th>
                                 <th>Price</th>
-                                <th>Volume(24h)</th>
+                                <th>Volume (24h)</th>
                                 <th>Market Cap</th>
-                                <th>Change(1h)</th>
-                                <th>Change(24h)</th>
-                                <th>Change(7d)</th>
+                                <th>Change (1h)</th>
+                                <th>Change (24h)</th>
+                                <th>Change (7d)</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -85,8 +87,6 @@ class HomePage extends React.Component {
                             </tbody>
                         </table>
                     </div>
-                    <button onClick={() => this.fetchData(prevPage)}>Prev</button>
-                    <button onClick={() => this.fetchData(nextPage)}>Next</button>
                 </div>
             </div>
         );

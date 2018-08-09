@@ -4,10 +4,6 @@
     font-size: 0.8rem;
 }
 
-table {
-    text-align: left;
-}
-
 th {
     color: #727272;
 }
@@ -19,4 +15,33 @@ td {
 .nameBold {
     font-size: 1rem;
     font-weight: bold!important;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: #5392ff;
+}
+
+h3{
+    color: #a0a0a0;
+    margin-top: 5rem;
+}
+
+.none {
+    visibility: hidden;
+}
+
+.btnPage {
+    margin-bottom: 0.5rem;
+}
+
+.table {
+    text-align: left;
 }

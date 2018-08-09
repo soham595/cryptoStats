@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -29,4 +30,8 @@
 
 body {
   background-color: #17181b;
+}
+
+.table {
+  margin-right: -5rem!important;
 }
