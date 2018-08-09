@@ -47,7 +47,7 @@ class HomePage extends React.Component {
             row =>
                 <tr key={row.id}>
                     <td>{row.rank}</td>
-                    <td className="nameBold"><img src={'/coinLogos/'+row.website_slug+'.png'}/> {row.name}</td>
+                    <td className="nameBold"><img src={'https://soham595.github.io/coinLogos/'+row.website_slug+'.png'}/> {row.name}</td>
                     <td>{row.symbol}</td>
                     <td className="blue">${row.quotes? (row.quotes.USD||{}).price||0 : 0}</td>
                     <td>${row.quotes.USD.volume_24h}</td>
