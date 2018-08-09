@@ -1,4 +1,5 @@
 import React from 'react';
+import './home.css';
 
 class HomePage extends React.Component {
     constructor() {
@@ -46,11 +47,14 @@ class HomePage extends React.Component {
             row =>
                 <tr key={row.id}>
                     <td>{row.rank}</td>
-                    <td>{row.name}</td>
-                    <td>{row.quotes? (row.quotes.USD||{}).price||0 : 0}</td>
+                    <td className="nameBold">{row.name}</td>
                     <td>{row.symbol}</td>
-                    <td>{row.quotes.USD.volume_24h}</td>
+                    <td>${row.quotes? (row.quotes.USD||{}).price||0 : 0}</td>
+                    <td>${row.quotes.USD.volume_24h}</td>
+                    <td>${row.quotes.USD.market_cap}</td>
+                    <td>{row.quotes.USD.percent_change_1h}%</td>
                     <td>{row.quotes.USD.percent_change_24h}%</td>
+                    <td>{row.quotes.USD.percent_change_7d}%</td>
                 </tr>
         );
 
@@ -67,10 +71,13 @@ class HomePage extends React.Component {
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Price</th>
                                 <th>Symbol</th>
+                                <th>Price</th>
                                 <th>Volume(24h)</th>
+                                <th>Market Cap</th>
+                                <th>Change(1h)</th>
                                 <th>Change(24h)</th>
+                                <th>Change(7d)</th>
                             </tr>
                             </thead>
                             <tbody>

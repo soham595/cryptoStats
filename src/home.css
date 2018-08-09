@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: #1b1c20;
+    color: #a0a0a0;
+    font-size: 0.8rem;
+}
+
+table {
+    text-align: left;
+}
+
+th {
+    color: #727272;
+}
+
+td {
+    font-weight: lighter;
+}
+
+.nameBold {
+    font-size: 1rem;
+    font-weight: bold!important;
+}

@@ -3,6 +3,7 @@ import NavigationBar from "./navigationBar";
 import Routes from "./routes";
 import Footer from "./footer";
 import './sticky-footer.css';
+import './App.css';
 
 class App extends Component {
     render() {
