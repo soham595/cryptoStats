@@ -43,5 +43,13 @@ h3{
 }
 
 .table {
+    text-align: right;
+}
+
+.coin-name {
     text-align: left;
+}
+
+Link {
+    text-decoration: none!important;
 }

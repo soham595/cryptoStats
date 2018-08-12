@@ -1,0 +1,17 @@
+.list-inline {
+    padding-top: 3.5rem;
+    padding-bottom: 0.5rem;
+    position: fixed;
+    width: 100%;
+    background-color: #1b1e21;
+}
+
+.list-inline-item {
+    color: #a0a0a0;
+    font-size: 0.8rem;
+    padding: 0 1.2rem 0;
+}
+
+.gl {
+    color: #5392ff;
+}
