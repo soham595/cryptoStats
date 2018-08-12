@@ -12,21 +12,20 @@ td {
     font-weight: lighter;
 }
 
-.nameBold {
-    font-size: 1rem;
-    font-weight: bold!important;
-}
-
 .red {
-    color: red;
+    color: #ef352e;
 }
 
 .green {
-    color: green;
+    color: #3bb452;
+}
+
+.white {
+    color: #d7d7d7;
 }
 
 .blue {
-    color: #5392ff;
+    color: #53a1ff;
 }
 
 h3{
@@ -50,6 +49,10 @@ h3{
     text-align: left;
 }
 
-Link {
+.link-name {
+    font-size: 1rem;
+    font-weight: bold!important;
+    padding-left: 0.5rem;
     text-decoration: none!important;
+    color: #a0a0a0;
 }

@@ -42,14 +42,14 @@ class HomePage extends React.Component {
             row =>
                 <tr key={row.id}>
                     <td>{row.rank}</td>
-                    <td className="coin-name"><img src={'/coinLogos/'+row.website_slug+'.png'}/> <Link to={"/cryptostats/currencies/"+row.id} className="nameBold">{row.name}</Link></td>
+                    <td className="coin-name"><img src={'/coinLogos/'+row.website_slug+'.png'}/> <Link to={"/cryptostats/currencies/"+row.id} className="link-name">{row.name}</Link></td>
                     <td className="coin-name">{row.symbol}</td>
-                    <td className="blue">${row.quotes? (row.quotes.USD||{}).price||0 : 0}</td>
+                    <td className="blue"><Link to={"/cryptostats/currencies/"+row.id} className="blue">${row.quotes? (row.quotes.USD||{}).price||0 : 0}</Link></td>
                     <td>${row.quotes.USD.volume_24h}</td>
                     <td>${row.quotes.USD.market_cap}</td>
-                    <td className={row.quotes.USD.percent_change_1h<0?"red":"green"}>{row.quotes.USD.percent_change_1h}%</td>
-                    <td className={row.quotes.USD.percent_change_24h<0?"red":"green"}>{row.quotes.USD.percent_change_24h}%</td>
-                    <td className={row.quotes.USD.percent_change_7d<0?"red":"green"}>{row.quotes.USD.percent_change_7d}%</td>
+                    <td className={row.quotes.USD.percent_change_1h<0?"red":(row.quotes.USD.percent_change_1h>0?"green":"white")}>{row.quotes.USD.percent_change_1h}%</td>
+                    <td className={row.quotes.USD.percent_change_24h<0?"red":(row.quotes.USD.percent_change_24h>0?"green":"white")}>{row.quotes.USD.percent_change_24h}%</td>
+                    <td className={row.quotes.USD.percent_change_7d<0?"red":(row.quotes.USD.percent_change_7d>0?"green":"white")}>{row.quotes.USD.percent_change_7d}%</td>
                 </tr>
         );
         // Render the table
