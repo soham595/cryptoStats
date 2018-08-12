@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import NavigationBar from "./navigationBar";
-import Routes from "./routes";
-import Footer from "./footer";
-import './sticky-footer.css';
+import NavigationBar from "./components/NavigationBar/navigationBar";
+import Routes from "./routes/routes";
+import Footer from "./components/Footer/footer";
+import './components/Footer/sticky-footer.css';
 import './App.css';
-import GlobalContainer from "./globalContainer";
+import GlobalContainer from "./components/GlobalContainer/globalContainer";
 
 class App extends Component {
     render() {
