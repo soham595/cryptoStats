@@ -1,0 +1,16 @@
+.coinContainer {
+    margin-top: 10%;
+}
+
+.specificTable {
+    margin-top: 2%;
+    text-align: left;
+}
+
+.specificTable td {
+    max-width: 10rem;
+}
+
+.coinRow {
+    text-align: left;
+}
