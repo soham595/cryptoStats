@@ -1,6 +1,7 @@
 .coinContainer {
     margin-top: 15%;
     color: #a0a0a0;
+    min-height: 40rem;
 }
 
 .specImg {

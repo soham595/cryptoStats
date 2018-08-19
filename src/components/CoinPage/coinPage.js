@@ -11,7 +11,7 @@ class CoinPage extends React.Component {
 
     componentDidMount() {
         const {id} = this.props.match.params;
-        fetch("https://api.coinmarketcap.com/v2/ticker/1/?convert=BTC&structure=array/")
+        fetch("https://api.coinmarketcap.com/v2/ticker/"+id+"/?convert=BTC&structure=array/")
             .then(data => {
                 return data.json();
             }).then(data => {
