@@ -1,5 +1,10 @@
 .coinContainer {
-    margin-top: 10%;
+    margin-top: 15%;
+    color: #a0a0a0;
+}
+
+.specImg {
+    margin-top: -1rem;
 }
 
 .specificTable {
@@ -7,10 +12,37 @@
     text-align: left;
 }
 
-.specificTable td {
-    max-width: 10rem;
+.coinRow {
+    text-align: left;
 }
 
-.coinRow {
+.specName {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.specSymbol {
+    color: #727272;
+    font-weight: bold;
+}
+
+.specBTC {
+    color: #727272;
+}
+
+.specUSD {
+    font-size: 1.5rem;
+}
+
+.specUSDspan {
+    font-size: 1rem;
+}
+
+.tableBTC {
+    color: #727272;
+    font-size: 0.9rem;
+}
+
+.slug {
     text-align: left;
 }
