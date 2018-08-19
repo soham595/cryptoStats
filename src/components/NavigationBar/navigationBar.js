@@ -18,11 +18,11 @@ class NavigationBar extends Component {
                             <ul className="navbar-nav mr-auto">
                                 <li className="dropdown nav-link">
                                     <a href="#" className="dropbtn nav-item dropdown-toggle" data-toggle="dropdown">
-                                        Dealer Management
+                                        Currencies
                                     </a>
                                     <ul id="dealer-menu" className="dropdown-menu">
-                                        <li><a href="#">Add Dealer Details</a></li>
-                                        <li><a href="#">View Dealer Details</a></li>
+                                        <li><a href="#">Coin Details</a></li>
+                                        <li><a href="#">Token Details</a></li>
                                     </ul>
                                 </li>
                                 <li className="nav-link">

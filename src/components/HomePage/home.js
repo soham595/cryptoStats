@@ -42,7 +42,7 @@ class HomePage extends React.Component {
             row =>
                 <tr key={row.id}>
                     <td>{row.rank}</td>
-                    <td className="coin-name"><img src={'/coinLogos/'+row.website_slug+'.png'}/> <Link to={"/cryptostats/currencies/"+row.id} className="link-name">{row.name}</Link></td>
+                    <td className="coin-name"><img className="homeImg" src={'/coinLogos/'+row.website_slug+'.png'}/> <Link to={"/cryptostats/currencies/"+row.id} className="link-name">{row.name}</Link></td>
                     <td className="coin-name">{row.symbol}</td>
                     <td className="blue"><Link to={"/cryptostats/currencies/"+row.id} className="blue">${row.quotes? (row.quotes.USD||{}).price||0 : 0}</Link></td>
                     <td>${row.quotes.USD.volume_24h}</td>
@@ -55,7 +55,7 @@ class HomePage extends React.Component {
         // Render the table
         // Take a look at the onClick handlers
         return (
-            <div>
+            <div className="container">
                 <h3>Cryptocurrency Statistics</h3>
                 <br/>
                 <div className="jumbotron">

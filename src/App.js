@@ -13,7 +13,7 @@ class App extends Component {
                 <GlobalContainer/>
                 <NavigationBar/>
                 <div className="Site-content">
-                    <div className="container">
+                    <div className="container-fluid">
                         <Routes/>
                     </div>
                 </div>
