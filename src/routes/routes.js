@@ -10,9 +10,9 @@ class Routes extends Component {
         return (
             <main>
                 <div>
-                    <Route exact path='/' component={CoinPage}/>
+                    <Route exact path='/' component={HomePage}/>
                     <Route exact path='/cryptostats' component={HomePage}/>
-                    <Route path='/cryptostats/currencies/:id' component={HomePage}/>
+                    <Route path='/cryptostats/currencies/:id' component={CoinPage}/>
                     <Route path='/cryptostats/signin' component={SignInPage}/>
                     <Route path='/cryptostats/signup' component={SignUpPage}/>
                 </div>

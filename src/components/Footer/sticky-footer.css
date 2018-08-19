@@ -16,3 +16,8 @@
     height: 0;
     visibility: hidden;
 }
+
+.site-footer {
+    text-align: center;
+    margin-bottom: 0.3%;
+}

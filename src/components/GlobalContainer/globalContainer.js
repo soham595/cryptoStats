@@ -32,8 +32,7 @@ class GlobalContainer extends React.Component {
     render() {
         console.log("act", this.state.active_cryptocurrencies);
         return (
-            <div>
-                <div className="container-fluid global-content">
+                <div className="container-fluid globalContent">
                     <ul className="list-inline">
                         <li className="list-inline-item">Cryptocurrencies: <span className="gl">{this.state.active_cryptocurrencies}</span></li>
                         <li className="list-inline-item">Markets: <span className="gl">{this.state.active_markets}</span></li>
@@ -42,7 +41,6 @@ class GlobalContainer extends React.Component {
                         <li className="list-inline-item">BTC Dominance: <span className="gl">{this.state.bitcoin_percentage_of_market_cap}%</span></li>
                     </ul>
                 </div>
-            </div>
         );
     }
 }
