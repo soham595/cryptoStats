@@ -62,7 +62,7 @@ class HomePage extends React.Component {
                     <div className="container">
                         <button className={currentPage===0?"none":"float-left btn btn-outline-light btnPage"} onClick={() => this.fetchData(prevPage)}>Previous 20</button>
                         <button className="float-right btn btn-outline-light btnPage" onClick={() => this.fetchData(nextPage)}>Next 20</button>
-                        <table className="table table-borderless table-hover">
+                        <table className="table table-borderless table-responsive-lg table-hover">
                             <thead>
                             <tr>
                                 <th>#</th>
