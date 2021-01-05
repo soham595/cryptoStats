@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://soham595.github.io/cryptoStats/",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-install": "^2.1.0",
     "babel-loader": "^7.1.2",
